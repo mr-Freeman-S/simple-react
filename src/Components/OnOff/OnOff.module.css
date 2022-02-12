@@ -1,0 +1,31 @@
+.main{
+    display: inline-block;
+}
+
+.on {
+    margin: 1em;
+    display: inline-block;
+    width: 2em;
+    background: red;
+    border-radius: 50%;
+}
+.on::before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 100%;
+
+}
+.off {
+    margin: 1em;
+    display: inline-block;
+    width: 2em;
+    background-color: gray;
+    border-radius: 50%;
+}
+.off::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 100%;
+}
