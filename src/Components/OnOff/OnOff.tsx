@@ -8,7 +8,6 @@ type OnOffType = {
 
 const OnOff = (props : OnOffType) => {
 
-
     const onClickButtonLight = (state:boolean) => {
         props.setLight(state)
     }
