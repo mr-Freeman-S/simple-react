@@ -4,6 +4,7 @@ import Rating from "./Components/Accordion/Rating";
 import Accordion from "./Components/Accordion/Accordion";
 import OnOff from "./Components/OnOff/OnOff";
 import OnOffSecond from "./Components/OnOff/OnOffSecond";
+import UncontrolledRating from "./Components/Accordion/UncontrolledRating";
 
 function App() {
     const  [light, setLight] = useState<boolean>(true)
@@ -19,6 +20,7 @@ function App() {
             <Accordion titleValue={"Menu"}/>
             <OnOff switchOn={light} setLight={setLight}/>
             <OnOffSecond/>
+            <UncontrolledRating/>
         </div>
     );
 }

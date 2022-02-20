@@ -9,13 +9,15 @@ type AccordionPropsType = {
 
 const Accordion = (props:AccordionPropsType) => {
     const [collapsed, setCollapsed] = useState(false)
-    const onClickHandler = () => {
+  /*  const onClickHandler = () => {
       collapsed ? setCollapsed(false): setCollapsed(true);
+    }*/
+    const onClickHandler = () => {
+        setCollapsed(!collapsed)
     }
     return (
         <div>
-            <AccordionTitle title={props.titleValue}/>
-            <button onClick={onClickHandler}>TOGGLE</button>
+            <AccordionTitle callback={onClickHandler} title={props.titleValue}/>
             { collapsed && <AccordionBody/> }
         </div>
     );

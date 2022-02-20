@@ -1,14 +1,15 @@
 import React from 'react';
 
 type AccordionTitlePropsType = {
-    title:string
+    title: string
+    callback: () => void
 }
 
 
-const AccordionTitle = (props:AccordionTitlePropsType) => {
+const AccordionTitle = (props: AccordionTitlePropsType) => {
     return (
         <div>
-            <h3>{props.title}</h3>
+            <h3 onClick={props.callback}>{props.title}</h3>
         </div>
     );
 };
