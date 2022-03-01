@@ -4,21 +4,17 @@ import AccordionBody from "./AccordionBody";
 
 type AccordionPropsType = {
     titleValue: string
-
+    collapsed: boolean
+    setCollapsed: (value: boolean) => void
 }
 
-const Accordion = (props:AccordionPropsType) => {
-    const [collapsed, setCollapsed] = useState(false)
-  /*  const onClickHandler = () => {
-      collapsed ? setCollapsed(false): setCollapsed(true);
-    }*/
-    const onClickHandler = () => {
-        setCollapsed(!collapsed)
-    }
+const Accordion = (props: AccordionPropsType) => {
     return (
         <div>
-            <AccordionTitle callback={onClickHandler} title={props.titleValue}/>
-            { collapsed && <AccordionBody/> }
+            <AccordionTitle onClick={() => {
+                props.setCollapsed(!props.collapsed)
+            }} title={props.titleValue}/>
+            {props.collapsed && <AccordionBody/>}
         </div>
     );
 };
